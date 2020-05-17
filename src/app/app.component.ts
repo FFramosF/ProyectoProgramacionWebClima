@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
   obtenerInfoIp(){
     this.ip.ObtenerInfoApi().subscribe(
       DATOS => {
-        console.log(DATOS.clima);
+        console.log(DATOS.info);
         this.CiudadInfo = DATOS.info;
         this.ClimaInfo = DATOS.clima;
         this.load=true;
