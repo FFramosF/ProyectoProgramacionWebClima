@@ -1,0 +1,7 @@
+<div *ngIf="!load" >
+    Cargando....
+</div>
+<div *ngIf="load">
+    <app-texto-arriba [Info]="CiudadInfo"></app-texto-arriba>
+    <app-carta-climas [Clima]="ClimaInfo"></app-carta-climas>
+</div>
