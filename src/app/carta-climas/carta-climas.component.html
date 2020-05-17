@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">         
+        <span *ngFor="let i of datos; first as isFirst" class="col col-12 d-flex justify-content-center" >
+            <div *ngIf="isFirst" class ="primer card col-lg-5 m-lg-4" style="background-color: skyblue; height: 9.5em; align-items: center;"> 
+                <div class="col col-12 " style="text-align: center;">
+                    Dia: {{i.Dia}} <br>
+                    Fecha: {{i.fecha}} <br>
+                    <img src="{{i.tiempo}}" class="imagen"> <br>
+                    Maxima: <span style="color: red;">{{i.max}} </span> <br>
+                    Minima: <span style="color: blue;">{{i.min}} </span> <br>
+                </div>
+            </div>
+        </span>
+        <span *ngFor="let i of datos | slice:1 ; first as isFirst" class="col col-12 col-lg-6 d-flex justify-content-center p-lg-0" >
+            <div class="card col-lg-12" style="background-color: cornflowerblue; height: 9.5em; align-items: center;">
+                <div class="col col-12" style="text-align: center;">
+                    Dia: {{i.Dia}}<br>
+                    Fecha: {{i.fecha}} <br>
+                    <img src="{{i.tiempo}}" class="imagen"> <br>
+                    Maxima: <span style="color: red;">{{i.max}} </span> <br>
+                    Minima: <span style="color: blue;">{{i.min}} </span> <br>
+                </div>
+            </div>
+        </span>    
+    </div>
+</div>
